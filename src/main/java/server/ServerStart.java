@@ -14,7 +14,7 @@ public class ServerStart {
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(new ServletHolder(allRequestsServlet), "/*");
 
-        Server server = new Server(8081);
+        Server server = new Server(8080);
         server.setHandler(context);
 
         server.start();
