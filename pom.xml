@@ -21,12 +21,12 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <!--Инструкция для сборки server.jar-->
+
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <outputDirectory>${project.basedir}</outputDirectory>
+                    <outputDirectory>${basedir}</outputDirectory>
                     <finalName>server</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>

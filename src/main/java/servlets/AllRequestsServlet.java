@@ -30,15 +30,14 @@ public class AllRequestsServlet extends HttpServlet {
         String message = req.getParameter("message");
 
 
-
-        resp.setContentType("text/html;charset=utf-8");
-
         if (message == null || message.isEmpty()) {
             resp.setStatus(HttpServletResponse.SC_FORBIDDEN);
         } else {
             resp.setStatus(HttpServletResponse.SC_OK);
         }
         createPage.put("message", message == null ? "" : message);
+
+        resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println(PageGenerator.instance().getPage("page.html", createPage));
 
 

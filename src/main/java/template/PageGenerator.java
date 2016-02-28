@@ -35,6 +35,6 @@ public class PageGenerator {
     }
 
     public PageGenerator() {
-        configuration = new Configuration();
+         configuration = new Configuration();
     }
 }

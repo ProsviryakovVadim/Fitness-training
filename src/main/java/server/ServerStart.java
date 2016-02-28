@@ -14,11 +14,15 @@ public class ServerStart {
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(new ServletHolder(allRequestsServlet), "/*");
 
-        Server server = new Server(8080);
+        Server server = new Server(8085);
         server.setHandler(context);
 
         server.start();
+        // Вывод в консоль сообщение
+        java.util.logging.Logger.getGlobal().info("Server started");
+
         server.join();
+
 
     }
 }
